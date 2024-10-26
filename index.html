@@ -15,151 +15,231 @@
             body{
                 margin:0;
             }
-            
-            .button-container{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                margin-left: 8px;
-                margin-right: 5px;
+            body,html{
+                color:rgb(33,25,34);
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 12px;
+            }
+
+            .header-1{
+                width:100%;
+                height:80px;
+                margin: 0px;
+                display:block;
+                align-content: center;
+                flex-direction: column;
+                position: fixed;
+                top:0px
+            }
+
+            .header-2{
+                height: 80px; 
+                margin:0px;
+                align-content:center; 
+                padding: 4px 16px;
+                box-sizing: border-box;
             }
             
-            .header{
+            .header-box{
                 height: 56px;
                 display: flex;
                 flex-direction: row;
-                justify-content:center;
+                align-items:center;
                 margin:0px;
-                background-color: #e9e9e9;
-                padding: 4px 16px;
+                box-sizing:border-box;
+                width:100%
             }
 
-            .home{
-                background-color: transparent;
-                width: 100%;
-                border-radius: 50px;
-                align-items:center;
-                vertical-align: middle;
-                min-width: 76px
+            .pinterest-tab{
+                box-sizing: border-box;
             }
-            .home-button{
-                color: whitesmoke;
-                font-weight: 600;
-                text-align: center;
-                width: 100%;
-                font-size: medium;
-                background-color: black;
-                border-style: none;
-                border-radius: 50px;
+
+            .pinterest-icon-box{
                 height: 48px;
-                font-size: 16px
-            }
-            .create{
+                width: 48px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
                 background-color: transparent;
-                width: 100%;
-                border-radius: 50px;
-                align-items:center;
-                vertical-align: middle;
-                min-width: 76px;
-                margin-left:8px
-            }
-            .create-button{
-                color: black;
-                font-weight: 600;
-                text-align: center;
-                width: 100%;
-                font-size: medium;
-                background-color: transparent;
-                border-style: none;
-                border-radius: 50px;
-                height: 48px;
-                font-size: 16px
-            }
-            
-            .home-button:hover{
+                border-radius: 50%;
+                perspective: 1px;
+                color: inherit;
                 cursor: pointer;
             }
 
-            .create-button:hover{
-                cursor: pointer;
+            .pinterest-icon{
+                color:#e60023;
+                display: block;
+                fill: currentColor;
+                stroke-width: 0;
             }
 
-            .search-bar{
-                background-color: #f6f6f6;
+            .home-tab{
                 height: 48px;
-                font-size: medium;
+                min-width: 60px;
+                box-sizing: border-box;
                 border-radius: 24px;
-                padding-left: 40px;
-                border-style: none;
-                width: 100%;
-                min-width: 1000px;
+                display: block;
             }
 
-            .search-bar-background{
-                align-content: center;
-                width: 100%;
+            .home-button{
+                white-space-collapse: collapse;
+                text-wrap-mode: nowrap;
+                height: 48px;
+                min-width: 60px;
+                box-sizing: border-box;
+                padding-left: 16px;
+                padding-right: 16px;
+                border-radius: 24px;
+                background-color: #111;
+                display: block;
+                color: inherit;
+                cursor: pointer;
+            }
+
+            .create-tab{
+                box-sizing: border-box;
+                display: block;   
+            }
+
+            .create-button{
+                white-space-collapse: collapse;
+                text-wrap-mode: nowrap;
+                height: 48px;
+                min-width: 60px;
+                box-sizing: border-box;
+                padding-left: 16px;
+                padding-right: 16px;
+                border-radius: 24px;
+                display: block;
+                color: inherit;
+                cursor: pointer;
+            }
+
+            .search-box-container{
+                min-width: 407px;
+                box-sizing: border-box;
+                min-height: 0;
+                padding-left: 8px;
+                padding-right: 8px;
+                display: block;
+            }
+
+            .search-bar-1{
+                background-color: rgb(241, 241, 241);
+                height: 48px;
+                box-sizing: border-box;
+                border-radius: 24px;
                 display: flex;
                 flex-direction: row;
+            }
+
+            .search-bar-2{
+                padding: 0px 0px 0px 16px;
+                height:100%;
                 align-items: center;
-                width: 100%;
-                height: 100%;
+                box-sizing: border-box;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .search-icon-box{
+                margin-right: 8px;
+                box-sizing: border-box;
+                display: block;
             }
 
             .search-icon{
-                fill:#767676;
                 display: block;
-                translate: 250%;
-                margin-right: 8px;
+                color: #767676;
+                fill:currentColor;
+                stroke-width: 0;
+            }
+
+            .search-bar-3{
+                height: 100%;
+                box-sizing: border-box;
+                display: block;
+            }
+
+            .search-bar{
+                background-color: transparent;
+                border: none;
+                color: rgb(51, 51, 51);
+                font-size: 16px;
+                font-weight: normal;
+                height: 100%;
+                outline: none;
+                padding: 0px;
+                width: 100%;
+            }
+
+            .button-container{
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .notifications-2,.messages-2{
+                width: 100%;
+                border-radius: 50%;
+                cursor: pointer;
+                display: block;
+            }
+
+            .notifications-3,.messages-3{
+                height: 48px;
+                width: 48px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background-color: transparent;
+                display: flex;
+                flex-direction: row;
             }
             
-            .logo-icon{
-                fill:#be0216;
+            .notifications-icon,.messages-icon{
                 display: block;
-
+                color: #767676;
+                fill: currentColor;
+                stroke-width: 0;
             }
-            .messages-icon{
-                fill:#767676;
+            
+            .notifications-number{
+                right: -8px;
+                top: -8px;
+                padding: 0px 3px 0px 2px;
+                height: 18px;
+                min-width: 18px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                position: absolute;
+                border-radius: 999px;
+                background-color: #e60023;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .profile-link{
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .button-box{
-                width: 48px;
-                height: 48px;
-                border-radius: 24px;
-                align-content: center;
-            }
-            .button-box-3{
-                width: 48px;
-                height: 48px;
-                border-radius: 24px;
-                align-content: center;
-                margin-right: 8px;
-            }
-            .button-box:hover{
-                background-color: #e9e9e9;
-                cursor:pointer
-            }
-            .button-box-3:hover{
-                background-color: #e9e9e9;
-                cursor:pointer
-            }
-            .bell-icon{
-                fill:#767676;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+                text-decoration: none;
+                color: inherit;
+                outline: none;
+                width: 100%;
+                border-radius: 50%;
+                cursor: pointer;
             }
 
-            .profile{
+            .profile-2{
+                height: 48px;
+                width: 48px;
+                box-sizing: border-box;
+                border-radius: 50%;
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
-                z-index: 1;
-                height: 50%;
-                width: auto;
             }
 
             /* FEED */
@@ -167,7 +247,9 @@
             .feed{
                 columns: 246px;
                 column-gap: 12px;
-                margin: 16px 12px;
+                margin-left: 12px;
+                margin-right: 12px;
+                margin-top: 80px;
             }
             .post{
                 border-radius: 16px;
@@ -184,41 +266,98 @@
         </style>
     </head>
     <body>
-        <div style=" display:flex; height: 80px; width: 100vw;flex-direction: column;margin: 0px; background-color: aqua; align-content:center; display: block; margin:4px 16px">
-            <div class="header">
+        <div class="header-1">
 
-                <div class="pinterest-tab">
-                    <div class="button-box">
-                        <svg class="logo-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M7.55 23.12c-.15-1.36-.04-2.67.25-3.93L9 14.02a7 7 0 0 1-.34-2.07c0-1.68.8-2.88 2.08-2.88.88 0 1.53.62 1.53 1.8q0 .57-.22 1.28l-.53 1.73q-.15.5-.15.91c0 1.2.92 1.88 2.09 1.88 2.08 0 3.57-2.16 3.57-4.96 0-3.12-2.04-5.11-5.06-5.11-3.36 0-5.49 2.19-5.49 5.23 0 1.23.38 2.37 1.11 3.15-.24.4-.5.48-.88.48-1.2 0-2.34-1.7-2.34-4 0-3.99 3.2-7.16 7.68-7.16 4.7 0 7.66 3.28 7.66 7.33 0 4.07-2.88 7.13-5.98 7.13a3.8 3.8 0 0 1-3.07-1.47l-.61 2.5c-.33 1.28-.83 2.5-1.62 3.67A12 12 0 0 0 24 11.99 12 12 0 1 0 7.55 23.12"></path></svg>
+            <div class="header-2">
+
+                <div class="header-box">
+
+                    <div class="pinterest-tab">
+                        <div style="box-sizing: border-box; display: block;">
+                            <a href="index.html" style="display: block;text-decoration: none; color: inherit;outline: none;border: 0;border-radius: 999px;padding: 0;cursor: pointer;background-color: transparent">
+                                <div class="pinterest-icon-box">
+                                    <svg class="pinterest-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M7.55 23.12c-.15-1.36-.04-2.67.25-3.93L9 14.02a7 7 0 0 1-.34-2.07c0-1.68.8-2.88 2.08-2.88.88 0 1.53.62 1.53 1.8q0 .57-.22 1.28l-.53 1.73q-.15.5-.15.91c0 1.2.92 1.88 2.09 1.88 2.08 0 3.57-2.16 3.57-4.96 0-3.12-2.04-5.11-5.06-5.11-3.36 0-5.49 2.19-5.49 5.23 0 1.23.38 2.37 1.11 3.15-.24.4-.5.48-.88.48-1.2 0-2.34-1.7-2.34-4 0-3.99 3.2-7.16 7.68-7.16 4.7 0 7.66 3.28 7.66 7.33 0 4.07-2.88 7.13-5.98 7.13a3.8 3.8 0 0 1-3.07-1.47l-.61 2.5c-.33 1.28-.83 2.5-1.62 3.67A12 12 0 0 0 24 11.99 12 12 0 1 0 7.55 23.12"></path></svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="home-tab">
-                    <button class="home-button" type="button" onclick="location.href='https://www.pinterest.com/'">Home</button>
-                </div>
-    
-                <div class="create-tab">
-                    <button class="create-button" type="button" onclick="location.href='https://www.pinterest.com/pin-creation-tool/'">Create</button>
-                </div>
-    
-                <div class="search-box-container">
-                    <div class="search-bar-background">
-                        <svg class="search-icon" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M10 16a6 6 0 1 1 .01-12.01A6 6 0 0 1 10 16m13.12 2.88-4.26-4.26a10 10 0 1 0-4.24 4.24l4.26 4.26a3 3 0 1 0 4.24-4.24"></path></svg>
-                        <input class="search-bar" type="text" placeholder="Search">
+        
+                    <div class="home-tab">
+                        <a href="index.html" style="display:block;text-decoration: none;color: inherit;outline: none;width: 100%;border-radius: 24px;cursor: pointer;">
+                            <div class="home-button">
+                                <div style="height: 100%;justify-content: center;align-items: center;flex-direction: row;margin: 0;display: flex;">
+                                    <span style="color:#fff;text-align: center;font-weight: 600px;font-size: 16px">Home</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+        
+                    <div class="create-tab">
+                        <a href="index.html" style="display:block;text-decoration: none;color: inherit;outline: none;width: 100%;border-radius: 24px;cursor:pointer">
+                            <div class="create-button">
+                                <div style="height: 100%;justify-content: center;align-items: center;flex-direction: row;margin: 0;display: flex;">
+                                    <span style="color:#111;text-align: center;font-weight: 600px;font-size: 16px">Create</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="search-box-container">
+                        <div class="search-bar-1">
+                            <div class="search-bar-2">
+                                <div class="search-icon-box">
+                                    <svg class="search-icon" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M10 16a6 6 0 1 1 .01-12.01A6 6 0 0 1 10 16m13.12 2.88-4.26-4.26a10 10 0 1 0-4.24 4.24l4.26 4.26a3 3 0 1 0 4.24-4.24"></path></svg>
+                                </div>
+                                <div class="search-bar-3"> 
+                                    <input class="search-bar" type="text" placeholder="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="button-container">
+
+                        <div class="notifications-1" style="box-sizing: border-box; position: relative;display: block;">
+                            <div class="notifications-2" role="button">
+                                <div class="notifications-3">
+                                    <div class="notifications-icon-box" style="box-sizing: border-box;position: relative;display: block;">
+                                        <svg class="notifications-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M19 7v6.17A10 10 0 0 1 22 19H2a10 10 0 0 1 3-5.83V7a7 7 0 1 1 14 0m-4 14a3 3 0 1 1-6 0z"></path></svg>
+                                        <div class="notifications-number">
+                                            <div style="padding: 0px 0px 1px 1px;
+                                            box-sizing: border-box;
+                                            display: block;
+                                            color:#fff;
+                                            text-align: center;
+                                            word-wrap: break-word;
+                                            font-weight: 500;
+                                            font-size: 12px;">2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="messages-1" style="box-sizing: border-box; position: relative;display: block;">
+                            <div class="messages-2" role="button">
+                                <div class="messages-3">
+                                    <div class="messages-icon-box" style="box-sizing: border-box;position: relative;display: block;">
+                                        <svg class="messages-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M18 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m-6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m-6-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M12 0a11 11 0 0 0-8.52 17.95l-1.46 5.43a.5.5 0 0 0 .73.55l5.08-2.75A10.98 10.98 0 0 0 23 11 11 11 0 0 0 12 0"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-1" style="box-sizing: border-box;display: block;"> 
+                            <a class="profile-link" href="https://www.pinterest.com/adrijimeneza/"> 
+                                <div class="profile-2"></div>
+                            </a>
+                            <!-- <img class="profile" src="https://raw.githubusercontent.com/jadrama/pinterest/caea74f2d10612552440376bf39000e956f10e45/profile.svg"> -->
+
+                        </div>
+                    </div>
+
                 </div>
-    
-                <div class="button-container">
-                    <div class="button-box">
-                        <svg class="bell-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M19 7v6.17A10 10 0 0 1 22 19H2a10 10 0 0 1 3-5.83V7a7 7 0 1 1 14 0m-4 14a3 3 0 1 1-6 0z"></path></svg>
-                    </div>
-                    <div class="button-box">
-                        <svg class="messages-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M18 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m-6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m-6-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M12 0a11 11 0 0 0-8.52 17.95l-1.46 5.43a.5.5 0 0 0 .73.55l5.08-2.75A10.98 10.98 0 0 0 23 11 11 11 0 0 0 12 0"></path></svg>
-                    </div>
-                    <div class="button-box-3"> 
-                        <img class="profile" src="https://raw.githubusercontent.com/jadrama/pinterest/caea74f2d10612552440376bf39000e956f10e45/profile.svg">
-                    </div>
-                </div>
+
             </div>
 
         </div>
