@@ -10,6 +10,7 @@
             html{
                 width: 100%;
                 text-size-adjust: none;
+                scroll-behavior: smooth;
             }
 
             body{
@@ -29,7 +30,8 @@
                 align-content: center;
                 flex-direction: column;
                 position: fixed;
-                top:0px
+                top:0px;
+                background-color: #fff;
             }
 
             .header-2{
@@ -65,6 +67,11 @@
                 perspective: 1px;
                 color: inherit;
                 cursor: pointer;
+            }
+
+            .pinterest-icon-box:hover,.notifications-3:hover,.messages-3:hover,.profile-2:hover,.options-icon-box:hover{
+                background-color: rgb(0, 0, 0,0.06);
+                transition: 0.5s;
             }
 
             .pinterest-icon{
@@ -123,6 +130,7 @@
                 padding-left: 8px;
                 padding-right: 8px;
                 display: block;
+                flex:1 1 auto
             }
 
             .search-bar-1{
@@ -132,6 +140,12 @@
                 border-radius: 24px;
                 display: flex;
                 flex-direction: row;
+                width: 100%;
+            }
+
+            .search-bar-1:hover{
+                background-color: rgb(225, 225, 225);
+                transition: 0.5s;
             }
 
             .search-bar-2{
@@ -142,6 +156,7 @@
                 position: relative;
                 display: flex;
                 flex-direction: row;
+                width: 100%;
             }
 
             .search-icon-box{
@@ -161,6 +176,7 @@
                 height: 100%;
                 box-sizing: border-box;
                 display: block;
+                width: 100%;
             }
 
             .search-bar{
@@ -201,7 +217,7 @@
                 flex-direction: row;
             }
             
-            .notifications-icon,.messages-icon{
+            .notifications-icon,.messages-icon,.options-icon{
                 display: block;
                 color: #767676;
                 fill: currentColor;
@@ -242,6 +258,73 @@
                 display: block;
             }
 
+            .profile-3{
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .profile-4{
+                height: 30px;
+                width: 30px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .profile-5{
+                height: 24px;
+                width: 24px;
+                box-sizing: border-box;
+                position: relative;
+                border-radius: 50%;
+                display: block;
+            }
+
+            .profile-icon{
+                color: transparent;
+                position: absolute;
+                display: block;
+                width: 100%;
+                border:0px;
+                height: auto;
+                max-width: 100%;
+                border-radius: 50%;
+            }
+
+            .options-4{
+                padding: 0;
+                border: 0;
+                background-color: transparent;
+            }
+
+            .options-5{
+                display: block;
+                border: 0;
+                padding: 0;
+                cursor: pointer;
+                background-color: transparent;
+            }
+
+            .options-icon-box{
+                height: 24px;
+                width: 24px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                background-color: transparent;
+                border-radius: 50%;
+                perspective: 1px;
+            }
+
             /* FEED */
 
             .feed{
@@ -251,17 +334,69 @@
                 margin-right: 12px;
                 margin-top: 80px;
             }
-            .post{
-                border-radius: 16px;
-                background-color: #767676;
-                break-inside: avoid;
-                margin-bottom: 16px;
+
+            .post-container{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 12px;
             }
+
+            .post-footer{
+                display: flex;
+                flex-direction: row;
+                padding: 8px 6px 16px;
+                box-sizing: border-box;
+                flex: 1 1 auto;
+                align-items: center;
+            }
+
+            .footer-profile{
+                border-radius: 50%;
+                width: 32px;
+                box-sizing: border-box;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
+            .footer-name{
+                margin-left: 3px;
+                margin-right: 3px; 
+                flex: 1 1 auto;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            .footer-name-link{
+                color:#111;
+                text-decoration: none;
+
+            }
+
+            .footer-name-link:hover{
+                text-decoration: underline;
+            }
+
             .img-post{
                 display:block;
                 width:100%;
                 border-radius: 16px;
             }
+
+            video{
+                object-fit: contain;
+                overflow-clip-margin: content-box;
+                overflow: clip;
+                box-sizing: border-box;
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            .video-box{
+                border-radius: 16px;
+                margin-bottom: 12px;
+            }
+
+
             
         </style>
     </head>
@@ -318,7 +453,7 @@
                     <div class="button-container">
 
                         <div class="notifications-1" style="box-sizing: border-box; position: relative;display: block;">
-                            <div class="notifications-2" role="button">
+                            <div aria-label="Notifications" class="notifications-2" role="button">
                                 <div class="notifications-3">
                                     <div class="notifications-icon-box" style="box-sizing: border-box;position: relative;display: block;">
                                         <svg class="notifications-icon" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M19 7v6.17A10 10 0 0 1 22 19H2a10 10 0 0 1 3-5.83V7a7 7 0 1 1 14 0m-4 14a3 3 0 1 1-6 0z"></path></svg>
@@ -349,10 +484,30 @@
                         
                         <div class="profile-1" style="box-sizing: border-box;display: block;"> 
                             <a class="profile-link" href="https://www.pinterest.com/adrijimeneza/"> 
-                                <div class="profile-2"></div>
+                                <div class="profile-2">
+                                    <div class="profile-3">
+                                        <div class="profile-4">
+                                            <div class="profile-5"> 
+                                                <img class="profile-icon" loading="auto" src="https://i.pinimg.com/75x75_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </a>
-                            <!-- <img class="profile" src="https://raw.githubusercontent.com/jadrama/pinterest/caea74f2d10612552440376bf39000e956f10e45/profile.svg"> -->
+                        </div>
 
+                        <div class="options-1" style="box-sizing: border-box; position: relative;display: block;">
+                            <div class="options-2" style="box-sizing: border-box;display: block;">
+                                <div aria-label class="options-3" style="box-sizing: border-box;display: block;">
+                                    <button aria-label="Accounts and more options" class="options-4" type="button">
+                                        <div class="options-5">
+                                            <div class="options-icon-box">
+                                                <svg class="options-icon" height="12" role="img" viewBox="0 0 24 24" width="12"><path d="M20.16 6.65 12 14.71 3.84 6.65a2.27 2.27 0 0 0-3.18 0 2.2 2.2 0 0 0 0 3.15L12 21 23.34 9.8a2.2 2.2 0 0 0 0-3.15 2.26 2.26 0 0 0-3.18 0"></path></svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -364,46 +519,228 @@
        
 
         <div class="feed">
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/474x/d3/2a/22/d32a22bbcace3e5303ac6e8b9949ea14.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/ab/4b/11/ab4b110bbc0ee36101e919cf53907295.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/564x/69/b9/e4/69b9e4537607e2acbe490798b22cd521.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/564x/1e/81/0e/1e810edea5079e570e582dd22ab95f9a.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/564x/9e/12/cd/9e12cd9fddef15fc7c32a65566331a11.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/4f/0a/13/4f0a1320197f41a768e90e352c79722a.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/564x/cf/53/79/cf537948cd4753bdf634ff94ad6829f8.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/d8/67/53/d867536e9c6987e0fea59bc75d90c4a1.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/564x/c5/c9/e0/c5c9e0512b4608134edf28aae01d7368.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/d8/67/53/d867536e9c6987e0fea59bc75d90c4a1.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/d8/67/53/d867536e9c6987e0fea59bc75d90c4a1.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/control/564x/c5/c9/e0/c5c9e0512b4608134edf28aae01d7368.jpg">
-            </div>
-            <div class="post" style="aspect-ratio: auto;">
-                <img class="img-post" src="https://i.pinimg.com/736x/d8/67/53/d867536e9c6987e0fea59bc75d90c4a1.jpg">
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/ef/0e/4d/ef0e4dfa0cee43c4ed71fff88791197b.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
             </div>
 
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/ab/4b/11/ab4b110bbc0ee36101e919cf53907295.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/control/564x/69/b9/e4/69b9e4537607e2acbe490798b22cd521.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/85/a3/9a/85a39a3de9620c34ea1d6d66b146a095.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://www.pinterest.com/adrijimeneza/">adri 💗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/d5/9e/c1/d59ec1ce0d288723b25213880b813630.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://www.pinterest.com/adrijimeneza/">adri 💗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/control/564x/cf/53/79/cf537948cd4753bdf634ff94ad6829f8.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/b1/14/a8/b114a83bc32a82931756f1f7a8c62817.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://www.pinterest.com/adrijimeneza/">adri 💗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/d8/67/53/d867536e9c6987e0fea59bc75d90c4a1.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/b3/fd/96/b3fd9617f7324296a34161d9bbc418cf.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/44/55/c3/4455c364efdcd812ff9e17adee338b2c.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-box" style="aspect-ratio: auto;">
+    
+                <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
+                    <source src="https://v1.pinimg.com/videos/mc/720p/d5/31/ae/d531ae9f1a90624f0d1f7047c21eaa22.mp4" type="video/mp4">
+                    <source src="https://v1.pinimg.com/videos/iht/hls/d5/31/ae/d531ae9f1a90624f0d1f7047c21eaa22.m3u8" type="video/m3u8">
+                </video>
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/d3/b5/76/d3b576cb39c80f7c282236c810cc2ee8.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/fa/89/3f/fa893f038da46fa3bff0df05b6af0dc9.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/c9/82/dc/c982dcb93230a62a9733c303a42d83af.jpg">
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/a4/35/cf/a435cfd207239677c8681f6984e72eb8.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/9e/12/cd/9e12cd9fddef15fc7c32a65566331a11.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/d1/e4/73/d1e47371430f4476ce229e7e2744c7f9.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/control/474x/d3/2a/22/d32a22bbcace3e5303ac6e8b9949ea14.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/3a/54/8c/3a548c744d19cd3fa4ed4ad151a1325c.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/4f/0a/13/4f0a1320197f41a768e90e352c79722a.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/control/564x/1e/81/0e/1e810edea5079e570e582dd22ab95f9a.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/564x/28/dd/6e/28dd6e428617b54f07d319e5e988af75.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/97/a7/3f/97a73f0f553157648c90655078101718.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container" style="aspect-ratio: auto;">
+                <img class="img-post" src="https://i.pinimg.com/736x/d3/b5/76/d3b576cb39c80f7c282236c810cc2ee8.jpg">
+                <div class="post-footer">
+                    <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
+                    <div class="footer-name">
+                        <a class="footer-name-link" href="https://pinterest.com/skyaliens9838/">Skyaliens</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </body>
