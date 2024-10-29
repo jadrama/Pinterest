@@ -32,6 +32,7 @@
                 position: fixed;
                 top:0px;
                 background-color: #fff;
+                z-index: 2;
             }
 
             .header-2{
@@ -397,8 +398,27 @@
                 margin-bottom: 12px;
             }
 
+            .pantalla{
+                border-radius: 16px;
+                width:100%;
+                box-sizing:border-box;
 
-            
+            }
+
+            .pantalla:hover{
+                background:rgba(0, 0, 0, 0.9);
+                transition: 0.25s;
+            }
+
+            .img-post:hover{
+                opacity: 0.5;
+                transition: 0.25s;
+            }
+
+            .video-post:hover{
+                opacity: 0.5;
+            }
+
         </style>
     </head>
     <body>
@@ -517,16 +537,19 @@
             </div>
 
         </div>
-       
 
         <div class="feed">
 
             <div class="video-box" style="aspect-ratio: auto;">
-    
-                <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
-                    <source src="https://v1.pinimg.com/videos/mc/720p/c2/cf/28/c2cf28173662f956b088ea6ca23d8513.mp4" type="video/mp4">
-                    <source src="https://v1.pinimg.com/videos/iht/hls/c2/cf/28/c2cf28173662f956b088ea6ca23d8513.m3u8" type="video/m3u8">
-                </video>
+                <div class="pantalla">
+
+                    <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
+                        <source src="https://v1.pinimg.com/videos/mc/720p/c2/cf/28/c2cf28173662f956b088ea6ca23d8513.mp4" type="video/mp4">
+                        <source src="https://v1.pinimg.com/videos/iht/hls/c2/cf/28/c2cf28173662f956b088ea6ca23d8513.m3u8" type="video/m3u8">
+                    </video>
+                    
+                </div>
+                
                 <div class="post-footer">
                     <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/03/53/6b/03536b9e5404bbf64015ae92eae3bea1.jpg">
                     <div class="footer-name">
@@ -537,7 +560,16 @@
 
             <a href="https://www.pinterest.com/pin/933793303969661714/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/ef/0e/4d/ef0e4dfa0cee43c4ed71fff88791197b.jpg">
+                    
+
+
+                    <div class="pantalla">
+                        
+                        <img class="img-post" src="https://i.pinimg.com/564x/ef/0e/4d/ef0e4dfa0cee43c4ed71fff88791197b.jpg">
+
+                    </div>
+                    
+                    
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ab/31/8b/ab318b0386eb960b8f8411706e1d81b5.jpg">
                         <div class="footer-name">
@@ -549,7 +581,12 @@
             
             <a href="https://www.pinterest.com/pin/651122058648915592/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/e0/6f/0f/e06f0f0f52c566c4843308860361227c.jpg">
+                    
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/e0/6f/0f/e06f0f0f52c566c4843308860361227c.jpg">
+                    
+                    </div>
+
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/75/b9/d1/75b9d142d8a6a8608bc837a9927beb11.jpg">
                         <div class="footer-name">
@@ -561,7 +598,9 @@
 
             <a href="https://pinterest.com/pin/496592296432560299/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/34/04/fc/3404fccbf75d365cc16dd475ee7d289d.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/34/04/fc/3404fccbf75d365cc16dd475ee7d289d.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/c3/ef/1f/c3ef1fddfdd417f508b46127e8957988.jpg">
                         <div class="footer-name">
@@ -574,7 +613,9 @@
 
             <a href="https://www.pinterest.com/pin/180495897560462170/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/85/a3/9a/85a39a3de9620c34ea1d6d66b146a095.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/85/a3/9a/85a39a3de9620c34ea1d6d66b146a095.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
@@ -587,7 +628,9 @@
             
             <a href="https://www.pinterest.com/pin/180495897560462203/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/d5/9e/c1/d59ec1ce0d288723b25213880b813630.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/d5/9e/c1/d59ec1ce0d288723b25213880b813630.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
@@ -602,7 +645,9 @@
 
             <a href="https://www.pinterest.com/pin/2251868556677484/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/6f/7a/53/6f7a5323a97c6957ca4f8cd70e414a99.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/6f/7a/53/6f7a5323a97c6957ca4f8cd70e414a99.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/be/ef/c4/beefc40050694df76ac801a98454f9ec.jpg">
                         <div class="footer-name">
@@ -615,7 +660,9 @@
 
             <a href="https://www.pinterest.com/pin/180495897560462226/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/b1/14/a8/b114a83bc32a82931756f1f7a8c62817.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/b1/14/a8/b114a83bc32a82931756f1f7a8c62817.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
@@ -628,7 +675,9 @@
             
             <a href="https://www.pinterest.com/pin/632474341474947773/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/fb/12/66/fb1266b70b047e3b0df704aa3252b74f.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/fb/12/66/fb1266b70b047e3b0df704aa3252b74f.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/1f/ac/a0/1faca078bec3a734ba69b7afc6778ab7.jpg">
                         <div class="footer-name">
@@ -641,7 +690,9 @@
             <a href="https://www.pinterest.com/pin/1055599906619384/" target="_blank">
                 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/18/01/80/1801807accadba3c768f86ee4a973c11.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/18/01/80/1801807accadba3c768f86ee4a973c11.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/bc/fd/28/bcfd28b700b8b11b23ac485d57005543.jpg">
                         <div class="footer-name">
@@ -653,7 +704,9 @@
 
             <a href="https://www.pinterest.com/pin/alpacas-and-llamas--70437486155684/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/56/7c/26/567c26cbdfb35d4ada67a1ada464cb01.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/56/7c/26/567c26cbdfb35d4ada67a1ada464cb01.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/1d/bf/9e/1dbf9eeb192a3cc000bd658997a63e15.jpg">
                         <div class="footer-name">
@@ -665,10 +718,12 @@
 
             <a href="https://www.pinterest.com/pin/6966574418935417/" target="_blank">
                 <div class="video-box" style="aspect-ratio: auto;">
-    
-                    <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
-                        <source src="https://v1.pinimg.com/videos/mc/720p/9c/d0/11/9cd01104f8787dd199e13bf780e24533.mp4" type="video/mp4">
-                        <source src="https://v1.pinimg.com/videos/iht/hls/9c/d0/11/9cd01104f8787dd199e13bf780e24533.m3u8" type="video/m3u8">                </video>
+                    <div class="pantalla">
+                        <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
+                            <source src="https://v1.pinimg.com/videos/mc/720p/9c/d0/11/9cd01104f8787dd199e13bf780e24533.mp4" type="video/mp4">
+                            <source src="https://v1.pinimg.com/videos/iht/hls/9c/d0/11/9cd01104f8787dd199e13bf780e24533.m3u8" type="video/m3u8">
+                        </video>
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/32/1e/52/321e5278c2e56dbb0258076c19a0fe04.jpg">
                         <div class="footer-name">
@@ -680,7 +735,10 @@
 
             <a href="https://www.pinterest.com/pin/180495897559078347/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/d3/b5/76/d3b576cb39c80f7c282236c810cc2ee8.jpg">
+                    
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/d3/b5/76/d3b576cb39c80f7c282236c810cc2ee8.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
@@ -693,7 +751,9 @@
 
             <a href="https://www.pinterest.com/pin/782078291569184594/" target="_blank">
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/92/25/83/9225832c3b152b7f543578dbb89e8101.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/92/25/83/9225832c3b152b7f543578dbb89e8101.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/44/51/66/445166f6a841b75f11d2a8d9a7ff88d9.jpg">
                         <div class="footer-name">
@@ -706,7 +766,9 @@
             <a href="https://www.pinterest.com/pin/180495897559078432/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/c9/82/dc/c982dcb93230a62a9733c303a42d83af.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/c9/82/dc/c982dcb93230a62a9733c303a42d83af.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
@@ -720,7 +782,9 @@
 
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/7b/8e/7c/7b8e7c47ffa9028111ac33157cf2ab6f.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/7b/8e/7c/7b8e7c47ffa9028111ac33157cf2ab6f.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/4f/58/26/4f5826598cf1941eca0802f4fbb23f39.jpg">
                         <div class="footer-name">
@@ -734,7 +798,9 @@
             <a href="https://www.pinterest.com/pin/586242076493993690/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/bc/31/60/bc316034399909eca0a861c116a645b4.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/bc/31/60/bc316034399909eca0a861c116a645b4.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/ff/db/e7/ffdbe7d8e3a82a2497b0d90bb82774a2.jpg">
                         <div class="footer-name">
@@ -749,7 +815,9 @@
             <a href="https://www.pinterest.com/pin/607986018469082005/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/3a/54/8c/3a548c744d19cd3fa4ed4ad151a1325c.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/3a/54/8c/3a548c744d19cd3fa4ed4ad151a1325c.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/66/60/e4/6660e4294643cfb86cca2f96798740f1.jpg">
                         <div class="footer-name">
@@ -762,7 +830,7 @@
             <a href="https://www.pinterest.com/pin/726979564882636912/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/d1/e4/73/d1e47371430f4476ce229e7e2744c7f9.jpg">
+                    <div class="pantalla"><img class="img-post" src="https://i.pinimg.com/564x/d1/e4/73/d1e47371430f4476ce229e7e2744c7f9.jpg"></div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/7d/b2/e5/7db2e5ec8e54808dc715b25cb40c6cd7.jpg">
                         <div class="footer-name">
@@ -776,7 +844,9 @@
             <a href="https://www.pinterest.com/pin/830703093779655698/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/control/474x/d3/2a/22/d32a22bbcace3e5303ac6e8b9949ea14.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/control/474x/d3/2a/22/d32a22bbcace3e5303ac6e8b9949ea14.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/1d/cc/24/1dcc24a40be43dea0420fbfe6cf650ec.jpg">
                         <div class="footer-name">
@@ -791,7 +861,9 @@
             <a href="https://www.pinterest.com/pin/738379301441749861/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/control/564x/1e/81/0e/1e810edea5079e570e582dd22ab95f9a.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/control/564x/1e/81/0e/1e810edea5079e570e582dd22ab95f9a.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/ad/1b/50/ad1b502453ac149a2960a3a873e1e2ba.jpg">
                         <div class="footer-name">
@@ -805,7 +877,9 @@
             <a href="https://www.pinterest.com/pin/49539664648762366/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/4f/0a/13/4f0a1320197f41a768e90e352c79722a.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/4f/0a/13/4f0a1320197f41a768e90e352c79722a.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/9a/e7/5d/9ae75d520f0dc727e7dc7026b895a06a.jpg">
                         <div class="footer-name">
@@ -818,7 +892,9 @@
             <a href="https://www.pinterest.com/pin/1101130177641751102/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/564x/28/dd/6e/28dd6e428617b54f07d319e5e988af75.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/564x/28/dd/6e/28dd6e428617b54f07d319e5e988af75.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/75x75_RS/57/f3/18/57f3188941e07c9e6bae86962d1f6b10.jpg">
                         <div class="footer-name">
@@ -831,11 +907,14 @@
             <a href="https://www.pinterest.com/pin/308285537009235212/" target="_blank">
 
                 <div class="video-box" style="aspect-ratio: auto;">
-        
-                    <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
-                        <source src="https://v1.pinimg.com/videos/mc/720p/d1/54/ae/d154aec198b4b500096e4df636f26072.mp4" type="video/mp4">
-                        <source src="https://v1.pinimg.com/videos/mc/hls/d1/54/ae/d154aec198b4b500096e4df636f26072.m3u8" type="video/m3u8">
-                    </video>
+                    
+                    <div class="pantalla">
+                        <video class="video-post" preload="auto" autoplay="autoplay" loop="loop" controls muted volume="0">
+                            <source src="https://v1.pinimg.com/videos/mc/720p/d1/54/ae/d154aec198b4b500096e4df636f26072.mp4" type="video/mp4">
+                            <source src="https://v1.pinimg.com/videos/mc/hls/d1/54/ae/d154aec198b4b500096e4df636f26072.m3u8" type="video/m3u8">
+                        </video>
+                    </div>
+
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/26/43/42/264342a8149c83fe5b0af4591c203814.jpg">
                         <div class="footer-name">
@@ -848,7 +927,9 @@
             <a href="https://www.pinterest.com/pin/1121818588427085698/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/97/a7/3f/97a73f0f553157648c90655078101718.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/97/a7/3f/97a73f0f553157648c90655078101718.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/df/4a/a0/df4aa027147834c2ca80999da6ade938.jpg">
                         <div class="footer-name">
@@ -863,7 +944,9 @@
             <a href="https://www.pinterest.com/pin/180495897559909023/" target="_blank">
 
                 <div class="post-container" style="aspect-ratio: auto;">
-                    <img class="img-post" src="https://i.pinimg.com/736x/e1/ff/ba/e1ffba13439875d92cb291d0035f73fe.jpg">
+                    <div class="pantalla">
+                        <img class="img-post" src="https://i.pinimg.com/736x/e1/ff/ba/e1ffba13439875d92cb291d0035f73fe.jpg">
+                    </div>
                     <div class="post-footer">
                         <img class="footer-profile" src="https://i.pinimg.com/280x280_RS/38/ac/a8/38aca8f8f219b6ab1958b943e623e1f6.jpg">
                         <div class="footer-name">
